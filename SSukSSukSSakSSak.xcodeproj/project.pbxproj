@@ -14,6 +14,7 @@
 		97DD9FCF29DEBC2200624544 /* SSukSSukSSakSSakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FCE29DEBC2200624544 /* SSukSSukSSakSSakTests.swift */; };
 		97DD9FD929DEBC2300624544 /* SSukSSukSSakSSakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FD829DEBC2300624544 /* SSukSSukSSakSSakUITests.swift */; };
 		97DD9FDB29DEBC2300624544 /* SSukSSukSSakSSakUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FDA29DEBC2300624544 /* SSukSSukSSakSSakUITestsLaunchTests.swift */; };
+		97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FE729DEC1B200624544 /* DailyShower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		97DD9FD429DEBC2300624544 /* SSukSSukSSakSSakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSukSSukSSakSSakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DD9FD829DEBC2300624544 /* SSukSSukSSakSSakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakUITests.swift; sourceTree = "<group>"; };
 		97DD9FDA29DEBC2300624544 /* SSukSSukSSakSSakUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		97DD9FE729DEC1B200624544 /* DailyShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyShower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				97DD9FBD29DEBC2100624544 /* SSukSSukSSakSSakApp.swift */,
 				97DD9FBF29DEBC2100624544 /* ContentView.swift */,
+				97DD9FE729DEC1B200624544 /* DailyShower.swift */,
 				97DD9FC129DEBC2200624544 /* Assets.xcassets */,
 				97DD9FC329DEBC2200624544 /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */,
 				97DD9FC029DEBC2100624544 /* ContentView.swift in Sources */,
 				97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */,
 			);
