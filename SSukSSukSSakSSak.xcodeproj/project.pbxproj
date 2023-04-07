@@ -16,6 +16,7 @@
 		97DD9FDB29DEBC2300624544 /* SSukSSukSSakSSakUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FDA29DEBC2300624544 /* SSukSSukSSakSSakUITestsLaunchTests.swift */; };
 		97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FE729DEC1B200624544 /* DailyShower.swift */; };
 		97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FE929DEC33B00624544 /* Theme.swift */; };
+		97DD9FED29DFB14E00624544 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FEC29DFB14E00624544 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		97DD9FDA29DEBC2300624544 /* SSukSSukSSakSSakUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		97DD9FE729DEC1B200624544 /* DailyShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyShower.swift; sourceTree = "<group>"; };
 		97DD9FE929DEC33B00624544 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		97DD9FEC29DFB14E00624544 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				97DD9FBF29DEBC2100624544 /* ContentView.swift */,
 				97DD9FE729DEC1B200624544 /* DailyShower.swift */,
 				97DD9FE929DEC33B00624544 /* Theme.swift */,
+				97DD9FEC29DFB14E00624544 /* CardView.swift */,
 				97DD9FC129DEBC2200624544 /* Assets.xcassets */,
 				97DD9FC329DEBC2200624544 /* Preview Content */,
 			);
@@ -275,6 +278,7 @@
 				97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */,
 				97DD9FC029DEBC2100624544 /* ContentView.swift in Sources */,
 				97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */,
+				97DD9FED29DFB14E00624544 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,10 @@ struct DailyShower {
 // Extension >> enumeration, structure, class 에 기능을 추가하기 위함
 extension DailyShower {
     // 새로운 기능들 기술
+    
+    // class overide 가능
+    
+    
     static let sampleData : [DailyShower] =
     [DailyShower(title: "MiGGulMiGGul", showerTime: 10, bodies: ["Lily", "UkDoo"], theme: .lilyPink),
      DailyShower(title: "BBoDukBBoDuk", showerTime: 20, bodies: ["Gaon", "ZzanGaon"], theme: .lilyBlue),
