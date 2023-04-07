@@ -17,6 +17,7 @@
 		97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FE729DEC1B200624544 /* DailyShower.swift */; };
 		97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FE929DEC33B00624544 /* Theme.swift */; };
 		97DD9FED29DFB14E00624544 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FEC29DFB14E00624544 /* CardView.swift */; };
+		97DD9FEF29DFB76500624544 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FEE29DFB76500624544 /* TrailingIconLabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		97DD9FE729DEC1B200624544 /* DailyShower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyShower.swift; sourceTree = "<group>"; };
 		97DD9FE929DEC33B00624544 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		97DD9FEC29DFB14E00624544 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		97DD9FEE29DFB76500624544 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				97DD9FBC29DEBC2100624544 /* SSukSSukSSakSSak */,
-				97DD9FCD29DEBC2200624544 /* SSukSSukSSakSSakTests */,
 				97DD9FD729DEBC2300624544 /* SSukSSukSSakSSakUITests */,
 				97DD9FBB29DEBC2100624544 /* Products */,
 			);
@@ -106,6 +107,8 @@
 				97DD9FE729DEC1B200624544 /* DailyShower.swift */,
 				97DD9FE929DEC33B00624544 /* Theme.swift */,
 				97DD9FEC29DFB14E00624544 /* CardView.swift */,
+				97DD9FEE29DFB76500624544 /* TrailingIconLabelStyle.swift */,
+				97DD9FCD29DEBC2200624544 /* SSukSSukSSakSSakTests */,
 				97DD9FC129DEBC2200624544 /* Assets.xcassets */,
 				97DD9FC329DEBC2200624544 /* Preview Content */,
 			);
@@ -278,6 +281,7 @@
 				97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */,
 				97DD9FC029DEBC2100624544 /* ContentView.swift in Sources */,
 				97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */,
+				97DD9FEF29DFB76500624544 /* TrailingIconLabelStyle.swift in Sources */,
 				97DD9FED29DFB14E00624544 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

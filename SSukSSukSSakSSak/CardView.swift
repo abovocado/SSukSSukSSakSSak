@@ -24,6 +24,8 @@ struct CardView: View {
                 Label("\(shower.bodies.count)", systemImage:"person.3")
                 Spacer()
                 
+                // 기본 라벨 스타일은 이미지 > 텍스트인데 우리는 텍스트 > 이미지를 사용하고 싶음.
+                // 새로운 labelStyle 정의 필요
                 Label("\(shower.showerTime)", systemImage: "clock")
                     .padding(.trailing, 20)
             }.font(.caption)
