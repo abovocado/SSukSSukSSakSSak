@@ -27,7 +27,9 @@ struct CardView: View {
                 // 기본 라벨 스타일은 이미지 > 텍스트인데 우리는 텍스트 > 이미지를 사용하고 싶음.
                 // 새로운 labelStyle 정의 필요
                 Label("\(shower.showerTime)", systemImage: "clock")
-                    .padding(.trailing, 20)
+                // 우리가 직접 정의하고 추가한 TrailingIconLabelStyle을 적용해줌
+                // 넣어줬으니까 .trailingIcon으로 접근 가능
+                    .labelStyle(.trailingIcon)
             }.font(.caption)
         }
         .padding()
