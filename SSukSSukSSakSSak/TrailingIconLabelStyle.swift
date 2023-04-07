@@ -28,7 +28,13 @@ struct TrailingIconLabelStyle : LabelStyle {
     }
 }
 
-
-
+// 우리가 만들어준 TrailingIconLabelStyle 이라는 것을 LabelStyle이라는 큰 집합 안에 넣어주기 위해 LabelStyle 을 extend
+// 조건이 뭐냐면 LabelStyle 이 TrailingIconLabelStyle일 때
+extension LabelStyle where Self == TrailingIconLabelStyle {
+    //LabelStyle 타입의 tatilingIcon라는 이름의 프로퍼티를 반환
+    // 반환해주는 계산 프로퍼티
+    
+    static var trailingIcon: Self{Self()}
+}
 
 
