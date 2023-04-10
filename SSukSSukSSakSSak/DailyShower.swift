@@ -8,13 +8,26 @@
 import Foundation
 
 // 1. DailyShower를 Card View에 보여주기 위한 객체 생성
-struct DailyShower {
+struct DailyShower : Identifiable{
+    // ShowerView에서 [DailyShower]를 ForEach로 뿌려주기로 결정했기 때문에 >> Identifiable 프로토콜을 따르도록 설정
+    // Identifiable,id를 주고
+    // UUID 프로토콜인 id 를 위해 생성자에 UUID = UUID()를 주게 됨
+    var id:UUID
     var title: String
     var showerTime: Int
     var bodies: [String]
 // 2. 색깔 속성을 주기 위한 Theme 객체 정의
     //Theme.swift에서 가질 수 있는 배경색, 액센트 컬러 정의 후 DailyShower라는 구조체가 Theme이라는 속성을 가지도록 추가함.
     var theme: Theme
+    
+    init(id: UUID = UUID(), title: String, showerTime: Int, bodies: [String], theme: Theme) {
+        self.id = id
+        self.title = title
+        self.showerTime = showerTime
+        self.bodies = bodies
+        self.theme = theme
+    }
+    
     
     
 }

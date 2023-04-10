@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		972AD7C029E427D6002B951C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972AD7BF29E427D6002B951C /* ContentView.swift */; };
 		97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FBD29DEBC2100624544 /* SSukSSukSSakSSakApp.swift */; };
-		97DD9FC029DEBC2100624544 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FBF29DEBC2100624544 /* ContentView.swift */; };
+		97DD9FC029DEBC2100624544 /* SSukSSukSSakSSakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FBF29DEBC2100624544 /* SSukSSukSSakSSakView.swift */; };
 		97DD9FC229DEBC2200624544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DD9FC129DEBC2200624544 /* Assets.xcassets */; };
 		97DD9FC529DEBC2200624544 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DD9FC429DEBC2200624544 /* Preview Assets.xcassets */; };
 		97DD9FCF29DEBC2200624544 /* SSukSSukSSakSSakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FCE29DEBC2200624544 /* SSukSSukSSakSSakTests.swift */; };
@@ -38,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		972AD7BF29E427D6002B951C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		97DD9FBA29DEBC2100624544 /* SSukSSukSSakSSak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSukSSukSSakSSak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DD9FBD29DEBC2100624544 /* SSukSSukSSakSSakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakApp.swift; sourceTree = "<group>"; };
-		97DD9FBF29DEBC2100624544 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97DD9FBF29DEBC2100624544 /* SSukSSukSSakSSakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakView.swift; sourceTree = "<group>"; };
 		97DD9FC129DEBC2200624544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DD9FC429DEBC2200624544 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97DD9FCA29DEBC2200624544 /* SSukSSukSSakSSakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSukSSukSSakSSakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +105,7 @@
 			children = (
 				97DD9FEB29DEC37900624544 /* Model */,
 				97DD9FBD29DEBC2100624544 /* SSukSSukSSakSSakApp.swift */,
-				97DD9FBF29DEBC2100624544 /* ContentView.swift */,
+				97DD9FBF29DEBC2100624544 /* SSukSSukSSakSSakView.swift */,
 				97DD9FE729DEC1B200624544 /* DailyShower.swift */,
 				97DD9FE929DEC33B00624544 /* Theme.swift */,
 				97DD9FEC29DFB14E00624544 /* CardView.swift */,
@@ -111,6 +113,7 @@
 				97DD9FCD29DEBC2200624544 /* SSukSSukSSakSSakTests */,
 				97DD9FC129DEBC2200624544 /* Assets.xcassets */,
 				97DD9FC329DEBC2200624544 /* Preview Content */,
+				972AD7BF29E427D6002B951C /* ContentView.swift */,
 			);
 			path = SSukSSukSSakSSak;
 			sourceTree = "<group>";
@@ -279,7 +282,8 @@
 			files = (
 				97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */,
 				97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */,
-				97DD9FC029DEBC2100624544 /* ContentView.swift in Sources */,
+				972AD7C029E427D6002B951C /* ContentView.swift in Sources */,
+				97DD9FC029DEBC2100624544 /* SSukSSukSSakSSakView.swift in Sources */,
 				97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */,
 				97DD9FEF29DFB76500624544 /* TrailingIconLabelStyle.swift in Sources */,
 				97DD9FED29DFB14E00624544 /* CardView.swift in Sources */,
