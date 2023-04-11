@@ -12,10 +12,9 @@ struct SSukSSukSSakSSakView: View {
     var body: some View {
         List{
             ForEach(showers) { shower in
-                /*@START_MENU_TOKEN@*/Text(shower.title)/*@END_MENU_TOKEN@*/
+                CardView(shower:shower)
+                    .listRowBackground(shower.theme.mainColor)
             }
-            
-            
         }
     }
 }
