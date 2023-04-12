@@ -35,15 +35,14 @@ struct DetailView: View {
                 }
                 
                 Section(header:Text("Bodies")){
-                    List{
                     // 몇 명일지 모르니까 ForEach 구문
-                        ForEach(shower.bodies){body in
-                            Text(body.name)
-                        }
+                    ForEach(shower.bodies){body in
+                        Label(body.name, systemImage: "person")
                     }
                 }
                 
                 Section(header:Text("History")){
+                    
                     
                 }
             }

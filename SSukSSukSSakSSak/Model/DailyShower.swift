@@ -40,7 +40,7 @@ struct DailyShower : Identifiable{
 // 그러려면 bodies는 [String]이 아니라 Identifiable 프로토콜을 따르는 타입을 원소로 하는 배열값이어야 함.
 // Identifiable 을 따르는 새로운 타입을 선언하여 bodies에 할당해주고 그 배열을 보여줄 수 있도록 함.
 extension DailyShower {
-    struct Bodies : Identifiable {
+    struct Bodies : Identifiable{
         var id : UUID
         var name: String
         
@@ -61,7 +61,7 @@ extension DailyShower {
     
     
     static let sampleData : [DailyShower] =
-    [DailyShower(title: "MiGGulMiGGul", showerTime: 10, bodies: ["Lily", "ZzangLily"], theme: .lilyPink),
+    [DailyShower(title: "MiGGulMiGGul", showerTime: 10, bodies: ["Lily", "ZzangLily", "Holy", "Molly"], theme: .lilyPink),
      DailyShower(title: "BBoDukBBoDuk", showerTime: 20, bodies: ["Gaon", "ZzanGaon"], theme: .lilyBlue),
      DailyShower(title: "LuLuLaLa", showerTime: 30, bodies: ["Maengu", "Zzangu"], theme: .lilyYellow)
     ]
