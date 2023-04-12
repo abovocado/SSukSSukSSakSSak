@@ -41,9 +41,9 @@ struct DetailView: View {
                     }
                 }
                 
+                // 추후에 History가 생기면 if 문 생겨서 바꾸고 일단은 No showers Yet
                 Section(header:Text("History")){
-                    
-                    
+                    Label("No showers yet", systemImage: "calendar.badge.exclamationmark")
                 }
             }
         }
