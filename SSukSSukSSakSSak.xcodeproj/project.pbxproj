@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		972AD7C229E54DD9002B951C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972AD7C129E54DD9002B951C /* DetailView.swift */; };
+		972AD7C829E93571002B951C /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972AD7C729E93571002B951C /* DetailEditView.swift */; };
 		97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FBD29DEBC2100624544 /* SSukSSukSSakSSakApp.swift */; };
 		97DD9FC029DEBC2100624544 /* SSukSSukSSakSSakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FBF29DEBC2100624544 /* SSukSSukSSakSSakView.swift */; };
 		97DD9FC229DEBC2200624544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DD9FC129DEBC2200624544 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		972AD7C129E54DD9002B951C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		972AD7C729E93571002B951C /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		97DD9FBA29DEBC2100624544 /* SSukSSukSSakSSak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSukSSukSSakSSak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DD9FBD29DEBC2100624544 /* SSukSSukSSakSSakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakApp.swift; sourceTree = "<group>"; };
 		97DD9FBF29DEBC2100624544 /* SSukSSukSSakSSakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSukSSukSSakSSakView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				97DD9FBF29DEBC2100624544 /* SSukSSukSSakSSakView.swift */,
 				97DD9FEC29DFB14E00624544 /* CardView.swift */,
 				972AD7C129E54DD9002B951C /* DetailView.swift */,
+				972AD7C729E93571002B951C /* DetailEditView.swift */,
 				97DD9FEE29DFB76500624544 /* TrailingIconLabelStyle.swift */,
 				97DD9FC129DEBC2200624544 /* Assets.xcassets */,
 				97DD9FCD29DEBC2200624544 /* SSukSSukSSakSSakTests */,
@@ -283,6 +286,7 @@
 				97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */,
 				97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */,
 				97DD9FC029DEBC2100624544 /* SSukSSukSSakSSakView.swift in Sources */,
+				972AD7C829E93571002B951C /* DetailEditView.swift in Sources */,
 				972AD7C229E54DD9002B951C /* DetailView.swift in Sources */,
 				97DD9FBE29DEBC2100624544 /* SSukSSukSSakSSakApp.swift in Sources */,
 				97DD9FEF29DFB76500624544 /* TrailingIconLabelStyle.swift in Sources */,

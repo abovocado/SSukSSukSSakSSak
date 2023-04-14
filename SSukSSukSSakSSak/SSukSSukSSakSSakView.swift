@@ -13,7 +13,6 @@ struct SSukSSukSSakSSakView: View {
     var body: some View {
         List{
             ForEach(showers) { shower in
-    
                 CardView(shower:shower)
                     .listRowBackground(shower.theme.mainColor)
             }
