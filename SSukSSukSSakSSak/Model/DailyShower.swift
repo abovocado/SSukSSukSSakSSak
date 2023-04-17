@@ -58,8 +58,6 @@ extension DailyShower {
     // 새로운 기능들 기술
     
     // class overide 가능
-    
-    
     static let sampleData : [DailyShower] =
     [DailyShower(title: "MiGGulMiGGul", showerTime: 10, bodies: ["Lily", "ZzangLily", "Holy", "Molly"], theme: .lilyPink),
      DailyShower(title: "BBoDukBBoDuk", showerTime: 20, bodies: ["Gaon", "ZzanGaon"], theme: .lilyBlue),
