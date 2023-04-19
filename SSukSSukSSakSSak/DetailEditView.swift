@@ -31,10 +31,14 @@ struct DetailEditView: View {
                 }
                 
                 Picker("Shower Color", selection: $selectedTheme){
-                    Label("Pink", systemImage: "paintpalette").tag(Theme.lilyPink)
-                    Label("Blue", systemImage: "paintpalette").tag(Theme.lilyBlue)
-                    Label("Green", systemImage: "paintpalette").tag(Theme.lilyGreen)
-                    Label("Yellow", systemImage: "paintpalette").tag(Theme.lilyYellow)
+//                    Label("Pink", systemImage: "paintpalette").tag(Theme.lilyPink)
+//                    Label("Blue", systemImage: "paintpalette").tag(Theme.lilyBlue)
+//                    Label("Green", systemImage: "paintpalette").tag(Theme.lilyGreen)
+//                    Label("Yellow", systemImage: "paintpalette").tag(Theme.lilyYellow)
+//
+                    ForEach(Theme.allCases){ theme in
+                        Label("\(theme.colorName)", systemImage: "paintpalette").tag(theme)
+                    }
                 }
                     // 지금은 Theme이 많이 없고 내가 지정을 해줬지만
                     // 추후에 확장성과 코드의 간결함을 위해 ForEach를 사용한다
