@@ -11,40 +11,38 @@ struct DetailView: View {
     var shower:DailyShower
     
     var body: some View {
-        VStack{
+       
             //Shower Info
+        List{
+            Section(header:Text("Shower Info")){
+                Label("Start Meeting", systemImage: "clock")
+                HStack{
+                    Label("Length", systemImage: "timer")
+                    Spacer()
+                    Text("\(shower.showerTime) Minutes")
+                }
+                
+                HStack{
+                    Label("Theme", systemImage: "paintpalette")
+                    Spacer()
+                    Text(shower.theme.rawValue)
+                        .padding(4)
+                        .background(shower.theme.mainColor)
+                        .foregroundColor(shower.theme.accentColor)
+                        .cornerRadius(4)
+                }
+            }
             
-            List{
-                Section(header:Text("Shower Info")){
-                    Label("Start Meeting", systemImage: "clock")
-                    HStack{
-                        Label("Length", systemImage: "timer")
-                        Spacer()
-                        Text("\(shower.showerTime) Minutes")
-                    }
-                    
-                    HStack{
-                        Label("Theme", systemImage: "paintpalette")
-                        Spacer()
-                        Text(shower.theme.rawValue)
-                            .padding(4)
-                            .background(shower.theme.mainColor)
-                            .foregroundColor(shower.theme.accentColor)
-                            .cornerRadius(4)
-                    }
+            Section(header:Text("Bodies")){
+                // 몇 명일지 모르니까 ForEach 구문
+                ForEach(shower.bodies){body in
+                    Label(body.name, systemImage: "person")
                 }
-                
-                Section(header:Text("Bodies")){
-                    // 몇 명일지 모르니까 ForEach 구문
-                    ForEach(shower.bodies){body in
-                        Label(body.name, systemImage: "person")
-                    }
-                }
-                
-                // 추후에 History가 생기면 if 문 생겨서 바꾸고 일단은 No showers Yet
-                Section(header:Text("History")){
-                    Label("No showers yet", systemImage: "calendar.badge.exclamationmark")
-                }
+            }
+            
+            // 추후에 History가 생기면 if 문 생겨서 바꾸고 일단은 No showers Yet
+            Section(header:Text("History")){
+                Label("No showers yet", systemImage: "calendar.badge.exclamationmark")
             }
         }
     }

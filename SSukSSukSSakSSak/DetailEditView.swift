@@ -12,6 +12,9 @@ struct DetailEditView: View {
     @State var text = ""
     @State var lengthInMinutes = 10.0
     @State var selectedTheme = Theme.lilyPink
+    @State var bodies : [DailyShower.Bodies] = []
+    
+    @State var newAttendeeName = ""
     
     var body: some View {
         
@@ -48,6 +51,24 @@ struct DetailEditView: View {
                     //   }
                     // 이렇게 할 수 있을 것 같다
                 
+            }
+            
+            Section(header: Text("Attendees")){
+                ForEach(bodies){body in
+                    Text(body.name)
+                        
+                }
+                
+                HStack{
+                    TextField("New Attendee", text: $newAttendeeName)
+                    Button(action:{
+                        bodies.append(DailyShower.Bodies(name:newAttendeeName))
+                        newAttendeeName = ""
+                    }){
+                        Image(systemName: "plus.circle.fill")
+                    }.disabled(newAttendeeName.isEmpty)
+                    
+                }
             }
         }
     }
