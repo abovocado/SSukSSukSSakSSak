@@ -56,8 +56,11 @@ struct DetailEditView: View {
             Section(header: Text("Attendees")){
                 ForEach(bodies){body in
                     Text(body.name)
-                        
                 }
+                .onDelete(){ indices in
+                    bodies.remove(atOffsets: indices)
+                }
+                
                 
                 HStack{
                     TextField("New Attendee", text: $newAttendeeName)
