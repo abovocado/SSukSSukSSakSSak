@@ -8,13 +8,51 @@
 import SwiftUI
 
 struct ShowerIngHeaderView: View {
+    // @State var progress = 0.2
+//    var shower:DailyShower
+//
+//    var totalTime :Int {
+//       Int(shower.showerTime)
+//    }
+//    var elaspedSeconds :Int = 0
+//    var remainingSeconds : Int {
+//        Int (totalTime - elaspedSeconds)
+//    }
+    
+    
+    var totalTime: Int
+    var elaspedSeconds : Int = 60
+    var remainingSeconds : Int {
+        Int (totalTime - elaspedSeconds)
+    }
+    
+    var progress : Double {
+        Double(elaspedSeconds)/Double(totalTime)
+    }
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ProgressView(value: progress)
+                
+            HStack{
+                VStack (alignment: .leading){
+                    Text("Seconds Elasped")
+                    Label("\(elaspedSeconds)", systemImage: "hourglass")
+                        
+                }.font(.caption)
+                Spacer()
+                VStack (alignment: .trailing){
+                    Text("Seconds Remaining")
+                    Label("\(remainingSeconds)", systemImage: "hourglass")
+                        .labelStyle(.trailingIcon)
+                }.font(.caption)
+            }
+        }.padding()
     }
 }
 
 struct ShowerIngHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngHeaderView()
+        ShowerIngHeaderView(totalTime: 300)
     }
 }
