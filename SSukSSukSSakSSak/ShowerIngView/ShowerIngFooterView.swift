@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ShowerIngFooterView: View {
+    var shower: DailyShower
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Text("Speaker 1 of \(shower.bodies.count)")
+            Spacer()
+            Button(action: {}){
+                Image(systemName: "forward.fill")
+            }
+        }
+        .padding()
     }
 }
 
 struct ShowerIngFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngFooterView()
+        ShowerIngFooterView(shower: DailyShower.sampleData[0])
     }
 }
