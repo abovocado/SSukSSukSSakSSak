@@ -16,8 +16,9 @@ struct ShowerIngFooterView: View {
             Spacer()
             Button(action: {}){
                 Image(systemName: "forward.fill")
+                    
             }
-        }
+        }.foregroundColor(shower.theme.accentColor)
         .padding()
     }
 }

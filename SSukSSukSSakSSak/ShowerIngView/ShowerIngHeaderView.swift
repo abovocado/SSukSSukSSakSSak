@@ -29,8 +29,9 @@ struct ShowerIngHeaderView: View {
     var progress : Double {
         Double(elaspedSeconds)/Double(totalTime)
     }
-    var theme: Theme
    
+    var theme: Theme
+    
     var body: some View {
         VStack{
             ProgressView(value: progress)
@@ -49,12 +50,13 @@ struct ShowerIngHeaderView: View {
                         .labelStyle(.trailingIcon)
                 }.font(.caption)
             }
+            .foregroundColor(theme.accentColor)
         }.padding()
     }
 }
 
 struct ShowerIngHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngHeaderView(totalTime: 300, theme:.lilyGreen)
+        ShowerIngHeaderView(totalTime: 300, theme: Theme.lilyPink)
     }
 }

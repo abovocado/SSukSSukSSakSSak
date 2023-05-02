@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct ShowerIngView: View {
+    var shower: DailyShower
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            RoundedRectangle(cornerRadius: 20)
+                .foregroundColor(shower.theme.mainColor)
+                .padding()
+            VStack{
+                ShowerIngHeaderView(totalTime: shower.showerTime, theme:shower.theme)
+                    
+                ShowerIngContentsView(shower:shower)
+                ShowerIngFooterView(shower:shower)
+            }.padding()
+        }
     }
 }
 
 struct ShowerIngView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngView()
+        ShowerIngView(shower: DailyShower.sampleData[1])
     }
 }

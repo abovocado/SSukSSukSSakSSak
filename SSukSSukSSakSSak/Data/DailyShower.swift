@@ -60,7 +60,7 @@ extension DailyShower {
     // class overide 가능
     static let sampleData : [DailyShower] =
     [DailyShower(title: "MiGGulMiGGul", showerTime: 10, bodies: ["Lily", "ZzangLily", "Holy", "Molly"], theme: .lilyPink),
-     DailyShower(title: "BBoDukBBoDuk", showerTime: 20, bodies: ["Gaon", "ZzanGaon"], theme: .lilyBlue),
+     DailyShower(title: "BBoDukBBoDuk", showerTime: 20, bodies: ["GaOn", "ZzanGaon"], theme: .lilyBlue),
      DailyShower(title: "LuLuLaLa", showerTime: 30, bodies: ["Maengu", "Zzangu"], theme: .lilyYellow)
     ]
     
