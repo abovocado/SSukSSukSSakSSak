@@ -11,17 +11,21 @@ struct SSukSSukSSakSSakView: View {
     // 필요한 파라미터는 우리가 보여줄 DailyShower 타입을 원소로 가지는 배열
     var showers: [DailyShower]
     var body: some View {
-        List{
-            ForEach(showers) { shower in
-                CardView(shower:shower)
-                    .listRowBackground(shower.theme.mainColor)
-            }
+        NavigationView{
+            List{
+                ForEach(showers) { shower in
+                    NavigationLink(destination: DetailView(shower: shower)){
+                        CardView(shower:shower)
+                    }.listRowBackground(shower.theme.mainColor)
+                }
+            }.navigationTitle("Shower List")
         }
     }
 }
 
 struct SSukSSukSSakSSakView_Previews: PreviewProvider {
     static var previews: some View {
-        SSukSSukSSakSSakView(showers: DailyShower.sampleData)
+            SSukSSukSSakSSakView(showers: DailyShower.sampleData)
+ 
     }
 }

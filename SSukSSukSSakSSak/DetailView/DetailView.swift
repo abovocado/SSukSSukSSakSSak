@@ -45,6 +45,7 @@ struct DetailView: View {
                 Label("No showers yet", systemImage: "calendar.badge.exclamationmark")
             }
         }
+        .navigationTitle(shower.title)
     }
 }
 
