@@ -21,7 +21,7 @@ struct ShowerIngView: View {
                 ShowerIngContentsView(shower:shower)
                 ShowerIngFooterView(shower:shower)
             }.padding()
-        }
+        }.navigationBarTitleDisplayMode(.inline)
     }
 }
 
