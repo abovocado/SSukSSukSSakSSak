@@ -10,6 +10,7 @@ import SwiftUI
 struct SSukSSukSSakSSakView: View {
     // 필요한 파라미터는 우리가 보여줄 DailyShower 타입을 원소로 가지는 배열
     var showers: [DailyShower]
+    @State var isAcvite = false
     var body: some View {
         NavigationView{
             List{
@@ -19,6 +20,20 @@ struct SSukSSukSSakSSakView: View {
                     }.listRowBackground(shower.theme.mainColor)
                 }
             }.navigationTitle("Shower List")
+            .toolbar {
+                Button(action:{isAcvite.toggle()}){
+                    Image(systemName: "plus")
+                }
+                .sheet(isPresented : $isAcvite){
+                    DetailEditView()
+                        .toolbar{
+                            ToolbarItem(placement: .confirmationAction){
+                                Text("Add")
+                            }
+                        }
+                }
+            }
+            
         }
     }
 }
