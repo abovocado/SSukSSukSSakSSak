@@ -34,6 +34,9 @@ struct CardView: View {
         }
         .padding()
         .foregroundColor(shower.theme.accentColor)
+        
+        
+        
     }
 }
 

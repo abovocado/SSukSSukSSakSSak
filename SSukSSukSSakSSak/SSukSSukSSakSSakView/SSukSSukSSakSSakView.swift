@@ -10,34 +10,46 @@ import SwiftUI
 struct SSukSSukSSakSSakView: View {
     // 필요한 파라미터는 우리가 보여줄 DailyShower 타입을 원소로 가지는 배열
     var showers: [DailyShower]
-    @State var isAcvite = false
+    @State var isActive = false
     var body: some View {
         NavigationView{
-            List{
+            List {
                 ForEach(showers) { shower in
                     NavigationLink(destination: DetailView(shower: shower)){
                         CardView(shower:shower)
-                    }.listRowBackground(shower.theme.mainColor)
+                    }
+                    .listRowBackground(shower.theme.mainColor)
                 }
-            }.navigationTitle("Shower List")
+            }
+            
+            .navigationTitle("Shower List")
             .toolbar {
-                Button(action:{isAcvite.toggle()}){
+                Button(action:{isActive.toggle()}){
                     Image(systemName: "plus")
                 }
-                .sheet(isPresented : $isAcvite){
+            }
+            
+            
+            .sheet(isPresented : $isActive){
+                NavigationView{
                     DetailEditView()
-                        .toolbar{
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction){
+                                Button("Dismiss"){
+                                    isActive.toggle()
+                                }
+                            }
                             ToolbarItem(placement: .confirmationAction){
-                                Text("Add")
+                                Button("Add"){
+                                    isActive.toggle()
+                                }
                             }
                         }
                 }
             }
-            
         }
     }
 }
-
 struct SSukSSukSSakSSakView_Previews: PreviewProvider {
     static var previews: some View {
             SSukSSukSSakSSakView(showers: DailyShower.sampleData)
