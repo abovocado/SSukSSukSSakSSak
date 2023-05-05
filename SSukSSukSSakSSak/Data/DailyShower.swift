@@ -15,6 +15,19 @@ struct DailyShower : Identifiable{
     var id:UUID
     var title: String
     var showerTime: Int
+    var showerTimeInDouble:Double {
+        
+        // 게터와 세터
+        // DetailEditView에서 값을 변경해줄 것이기 때문에,
+        //
+        get {
+            Double(showerTime)
+        }
+        set {
+            showerTime = Int(newValue)
+        }
+    }
+    
     var bodies: [Bodies]
 // 2. 색깔 속성을 주기 위한 Theme 객체 정의
     //Theme.swift에서 가질 수 있는 배경색, 액센트 컬러 정의 후 DailyShower라는 구조체가 Theme이라는 속성을 가지도록 추가함.
@@ -61,7 +74,9 @@ extension DailyShower {
     static let sampleData : [DailyShower] =
     [DailyShower(title: "MiGGulMiGGul", showerTime: 10, bodies: ["Lily", "ZzangLily", "Holy", "Molly"], theme: .lilyPink),
      DailyShower(title: "BBoDukBBoDuk", showerTime: 20, bodies: ["GaOn", "ZzanGaon"], theme: .lilyBlue),
-     DailyShower(title: "LuLuLaLa", showerTime: 30, bodies: ["Maengu", "Zzangu"], theme: .lilyYellow)
-    ]
+     DailyShower(title: "LuLuLaLa", showerTime: 30, bodies: ["Maengu", "Zzangu"], theme: .lilyYellow)]
+     
+     static let emptyData : DailyShower =
+     DailyShower(title: "", showerTime: 5, bodies: [], theme: .lilyYellow)
     
 }

@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct DetailView: View {
-    var shower:DailyShower
+    @Binding var shower:DailyShower
+    @State var isShowingNextView = false
+    @State var editingShower : DailyShower = DailyShower.emptyData
+
     
     var body: some View {
        
@@ -50,11 +53,39 @@ struct DetailView: View {
             }
         }
         .navigationTitle(shower.title)
+        .toolbar{
+            
+            Button("Edit"){
+
+                    isShowingNextView.toggle()
+                    editingShower = shower
+
+            }
+        }
+        .sheet(isPresented: $isShowingNextView){
+            NavigationView{
+                DetailEditView(shower: $editingShower )
+                    .toolbar{
+                        ToolbarItem(placement: .cancellationAction){
+                            Button("Cancel"){
+                                isShowingNextView = false
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .confirmationAction){
+                            Button("Done"){
+                                isShowingNextView = false
+                                shower = editingShower
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(shower:DailyShower.sampleData[0])
+        DetailView(shower: .constant(DailyShower.sampleData[0]))
     }
 }

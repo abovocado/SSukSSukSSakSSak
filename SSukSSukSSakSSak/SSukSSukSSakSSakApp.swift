@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SSukSSukSSakSSakApp: App {
+    @State private var showers = DailyShower.sampleData
+    
+    
     var body: some Scene {
         WindowGroup {
-            SSukSSukSSakSSakView(showers:DailyShower.sampleData)
+            SSukSSukSSakSSakView(showers : $showers)
         }
     }
 }

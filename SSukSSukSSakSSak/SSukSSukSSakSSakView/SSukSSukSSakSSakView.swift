@@ -9,13 +9,16 @@ import SwiftUI
 
 struct SSukSSukSSakSSakView: View {
     // 필요한 파라미터는 우리가 보여줄 DailyShower 타입을 원소로 가지는 배열
-    var showers: [DailyShower]
+    @Binding var showers: [DailyShower]
     @State var isActive = false
+    @State var emptyShower : DailyShower = DailyShower.emptyData
+    
+    
     var body: some View {
         NavigationView{
             List {
-                ForEach(showers) { shower in
-                    NavigationLink(destination: DetailView(shower: shower)){
+                ForEach($showers) { $shower in
+                    NavigationLink(destination: DetailView(shower: $shower)){
                         CardView(shower:shower)
                     }
                     .listRowBackground(shower.theme.mainColor)
@@ -32,7 +35,7 @@ struct SSukSSukSSakSSakView: View {
             
             .sheet(isPresented : $isActive){
                 NavigationView{
-                    DetailEditView()
+                    DetailEditView(shower: $emptyShower)
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction){
                                 Button("Dismiss"){
@@ -52,7 +55,7 @@ struct SSukSSukSSakSSakView: View {
 }
 struct SSukSSukSSakSSakView_Previews: PreviewProvider {
     static var previews: some View {
-            SSukSSukSSakSSakView(showers: DailyShower.sampleData)
+        SSukSSukSSakSSakView(showers: .constant(DailyShower.sampleData))
  
     }
 }
