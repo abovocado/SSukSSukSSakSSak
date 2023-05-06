@@ -57,6 +57,6 @@ struct ShowerIngHeaderView: View {
 
 struct ShowerIngHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngHeaderView(totalTime: 300, theme: Theme.lilyPink)
+        ShowerIngHeaderView(totalTime: 300, theme: Theme.lilyGreen)
     }
 }

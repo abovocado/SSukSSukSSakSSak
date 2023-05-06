@@ -56,7 +56,6 @@ struct DetailView: View {
         .toolbar{
             
             Button("Edit"){
-
                     isShowingNextView.toggle()
                     editingShower = shower
 

@@ -25,7 +25,7 @@ struct SSukSSukSSakSSakView: View {
                 }
             }
             
-            .navigationTitle("Shower List")
+            .navigationTitle("Daily Shower")
             .toolbar {
                 Button(action:{isActive.toggle()}){
                     Image(systemName: "plus")

@@ -27,6 +27,6 @@ struct ShowerIngView: View {
 
 struct ShowerIngView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngView(shower: DailyShower.sampleData[1])
+        ShowerIngView(shower: DailyShower.sampleData[0])
     }
 }

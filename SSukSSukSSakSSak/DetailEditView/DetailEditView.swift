@@ -22,8 +22,6 @@ struct DetailEditView: View {
         
         // Form-specific styling applies to things like buttons, toggles, labels, lists, and more.
         Form{
-            
-            
             Section(header:Text("Meeting Info")){
                 TextField("Title", text: $shower.title)
                 // slider 필요
