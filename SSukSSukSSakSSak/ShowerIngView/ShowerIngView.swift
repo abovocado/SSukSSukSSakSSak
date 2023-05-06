@@ -14,8 +14,7 @@ struct ShowerIngView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(shower.theme.mainColor)
-                .padding()
+                .fill(shower.theme.mainColor)
             VStack{
                 ShowerIngHeaderView(secondsElapsed: showerTimer.secondsElapsed,
                                     secondsRemaining: showerTimer.secondsRemaining,
@@ -24,15 +23,18 @@ struct ShowerIngView: View {
                 ShowerIngContentsView(shower:shower)
                 ShowerIngFooterView(showerers: showerTimer.showerers, skipAction: showerTimer.skipShowerer)
             }
-            .padding()
-            .onAppear {
-                showerTimer.reset(lengthInMinutes: shower.showerTime, bodies: shower.bodies)
-                showerTimer.startShower()
-            }
-            .onDisappear {
-                showerTimer.stopShower()
-            }
         }
+        .padding()
+        .onAppear {
+            showerTimer.reset(lengthInMinutes: shower.showerTime, bodies: shower.bodies)
+            showerTimer.startShower()
+        }
+        .onDisappear {
+            showerTimer.stopShower()
+            let newHistory = History(id: UUID(), date: Date(), bodies: shower.bodies)
+            shower.history.insert(newHistory, at: 0)
+        }
+        
         .navigationBarTitleDisplayMode(.inline)
     }
 }

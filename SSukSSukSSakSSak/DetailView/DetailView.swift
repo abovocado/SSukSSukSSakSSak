@@ -11,7 +11,7 @@ struct DetailView: View {
     @Binding var shower:DailyShower
     @State var isShowingNextView = false
     @State var editingShower : DailyShower = DailyShower.emptyData
-
+    
     
     var body: some View {
        
@@ -49,7 +49,18 @@ struct DetailView: View {
             
             // 추후에 History가 생기면 if 문 생겨서 바꾸고 일단은 No showers Yet
             Section(header:Text("History")){
-                Label("No showers yet", systemImage: "calendar.badge.exclamationmark")
+                
+                if shower.history.isEmpty {
+                    Label("No showers yet", systemImage: "calendar.badge.exclamationmark")
+                } else {
+                    ForEach(shower.history){ history in
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.date, style: .date)
+                        }
+                        
+                    }
+                }
             }
         }
         .navigationTitle(shower.title)

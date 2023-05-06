@@ -32,6 +32,7 @@ struct DailyShower : Identifiable{
 // 2. 색깔 속성을 주기 위한 Theme 객체 정의
     //Theme.swift에서 가질 수 있는 배경색, 액센트 컬러 정의 후 DailyShower라는 구조체가 Theme이라는 속성을 가지도록 추가함.
     var theme: Theme
+    var history : [History] = []
     
     init(id: UUID = UUID(), title: String, showerTime: Int, bodies: [String], theme: Theme) {
         self.id = id
