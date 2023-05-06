@@ -20,14 +20,15 @@ struct ShowerIngHeaderView: View {
 //    }
     
     
-    var totalTime: Int
-    var elaspedSeconds : Int = 60
-    var remainingSeconds : Int {
-        Int (totalTime - elaspedSeconds)
-    }
+    let secondsElapsed: Int
+    let secondsRemaining: Int
+    private var totalSeconds: Int {
+            secondsElapsed + secondsRemaining
+        }
     
     var progress : Double {
-        Double(elaspedSeconds)/Double(totalTime)
+        guard totalSeconds > 0 else {return 1}
+        return Double(secondsElapsed)/Double(totalSeconds)
     }
    
     var theme: Theme
@@ -40,13 +41,13 @@ struct ShowerIngHeaderView: View {
             HStack{
                 VStack (alignment: .leading){
                     Text("Seconds Elasped")
-                    Label("\(elaspedSeconds)", systemImage: "hourglass")
+                    Label("\(secondsElapsed)", systemImage: "hourglass")
                         
                 }.font(.caption)
                 Spacer()
                 VStack (alignment: .trailing){
                     Text("Seconds Remaining")
-                    Label("\(remainingSeconds)", systemImage: "hourglass")
+                    Label("\(secondsRemaining)", systemImage: "hourglass")
                         .labelStyle(.trailingIcon)
                 }.font(.caption)
             }
@@ -57,6 +58,6 @@ struct ShowerIngHeaderView: View {
 
 struct ShowerIngHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngHeaderView(totalTime: 300, theme: Theme.lilyGreen)
+        ShowerIngHeaderView(secondsElapsed: 60, secondsRemaining: 180, theme: Theme.lilyGreen)
     }
 }

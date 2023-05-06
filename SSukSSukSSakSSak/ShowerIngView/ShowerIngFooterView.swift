@@ -8,23 +8,45 @@
 import SwiftUI
 
 struct ShowerIngFooterView: View {
-    var shower: DailyShower
+    let showerers: [ShowerTimer.Showerer]
+    var skipAction: ()->Void
+    
+    
+    private var showererNumber: Int? {
+            guard let index = showerers.firstIndex(where: { !$0.isCompleted }) else { return nil }
+            return index + 1
+        }
+    private var isLastShowerer: Bool {
+        return showerers.dropLast().allSatisfy { $0.isCompleted }
+        
+    }
+    
+    private var showererText: String {
+        guard let showererNumber = showererNumber else { return "No more showerers" }
+        return "Showerer \(showererNumber) of \(showerers.count)"
+    }
+    
     
     var body: some View {
-        HStack{
-            Text("Speaker 1 of \(shower.bodies.count)")
-            Spacer()
-            Button(action: {}){
-                Image(systemName: "forward.fill")
-                    
+        VStack{
+            HStack{
+                if isLastShowerer {
+                    Text("Last Speaker")
+                } else {
+                    Text(showererText)
+                    Spacer()
+                    Button(action: skipAction){
+                        Image(systemName: "forward.fill")
+                    }
+                }
             }
-        }.foregroundColor(shower.theme.accentColor)
-        .padding()
+        }
+        .padding([.bottom, .horizontal])
     }
 }
 
 struct ShowerIngFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngFooterView(shower: DailyShower.sampleData[0])
+        ShowerIngFooterView(showerers: DailyShower.sampleData[0].bodies.showerers, skipAction: {})
     }
 }

@@ -18,7 +18,7 @@ struct DetailView: View {
             //Shower Info
         List{
             Section(header:Text("Shower Info")){
-                NavigationLink(destination: ShowerIngView(shower:shower)){
+                NavigationLink(destination: ShowerIngView(shower:$shower)){
                     Label("Start Meeting", systemImage: "clock")
                         .font(.headline)
                         .foregroundColor(.accentColor)

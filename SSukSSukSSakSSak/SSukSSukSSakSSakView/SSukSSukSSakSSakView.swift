@@ -45,6 +45,7 @@ struct SSukSSukSSakSSakView: View {
                             ToolbarItem(placement: .confirmationAction){
                                 Button("Add"){
                                     isActive.toggle()
+                                    showers.append(emptyShower)
                                 }
                             }
                         }

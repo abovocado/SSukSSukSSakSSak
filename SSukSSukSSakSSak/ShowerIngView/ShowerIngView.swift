@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ShowerIngView: View {
-    var shower: DailyShower
+    @Binding var shower: DailyShower
+    @StateObject var showerTimer = ShowerTimer()
     
     var body: some View {
         ZStack{
@@ -16,17 +17,28 @@ struct ShowerIngView: View {
                 .foregroundColor(shower.theme.mainColor)
                 .padding()
             VStack{
-                ShowerIngHeaderView(totalTime: shower.showerTime, theme:shower.theme)
-                    
+                ShowerIngHeaderView(secondsElapsed: showerTimer.secondsElapsed,
+                                    secondsRemaining: showerTimer.secondsRemaining,
+                                    theme: shower.theme)
+                
                 ShowerIngContentsView(shower:shower)
-                ShowerIngFooterView(shower:shower)
-            }.padding()
-        }.navigationBarTitleDisplayMode(.inline)
+                ShowerIngFooterView(showerers: showerTimer.showerers, skipAction: showerTimer.skipShowerer)
+            }
+            .padding()
+            .onAppear {
+                showerTimer.reset(lengthInMinutes: shower.showerTime, bodies: shower.bodies)
+                showerTimer.startShower()
+            }
+            .onDisappear {
+                showerTimer.stopShower()
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct ShowerIngView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowerIngView(shower: DailyShower.sampleData[0])
+        ShowerIngView(shower: .constant(DailyShower.sampleData[0]))
     }
 }
