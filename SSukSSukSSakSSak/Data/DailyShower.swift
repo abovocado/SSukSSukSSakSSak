@@ -8,7 +8,7 @@
 import Foundation
 
 // 1. DailyShower를 Card View에 보여주기 위한 객체 생성
-struct DailyShower : Identifiable{
+struct DailyShower : Identifiable, Codable {
     // ShowerView에서 [DailyShower]를 ForEach로 뿌려주기로 결정했기 때문에 >> Identifiable 프로토콜을 따르도록 설정
     // Identifiable,id를 주고
     // UUID 프로토콜인 id 를 위해 생성자에 UUID = UUID()를 주게 됨
@@ -54,7 +54,7 @@ struct DailyShower : Identifiable{
 // 그러려면 bodies는 [String]이 아니라 Identifiable 프로토콜을 따르는 타입을 원소로 하는 배열값이어야 함.
 // Identifiable 을 따르는 새로운 타입을 선언하여 bodies에 할당해주고 그 배열을 보여줄 수 있도록 함.
 extension DailyShower {
-    struct Bodies : Identifiable{
+    struct Bodies : Identifiable, Codable {
         var id : UUID
         var name: String
         

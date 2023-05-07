@@ -9,10 +9,11 @@ import SwiftUI
 
 struct SSukSSukSSakSSakView: View {
     // 필요한 파라미터는 우리가 보여줄 DailyShower 타입을 원소로 가지는 배열
+    @Environment(\.scenePhase) private var scenePhase
     @Binding var showers: [DailyShower]
     @State var isActive = false
     @State var emptyShower : DailyShower = DailyShower.emptyData
-    
+    let saveAction: ()->Void
     
     var body: some View {
         NavigationView{
@@ -39,24 +40,34 @@ struct SSukSSukSSakSSakView: View {
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction){
                                 Button("Dismiss"){
+                                    emptyShower = DailyShower.emptyData
                                     isActive.toggle()
+                                    
                                 }
                             }
                             ToolbarItem(placement: .confirmationAction){
                                 Button("Add"){
-                                    isActive.toggle()
                                     showers.append(emptyShower)
+                                    emptyShower = DailyShower.emptyData
+                                    isActive.toggle()
+                                    
+                                    
                                 }
                             }
                         }
                 }
             }
         }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive {
+                saveAction()
+            }
+        }
     }
 }
 struct SSukSSukSSakSSakView_Previews: PreviewProvider {
     static var previews: some View {
-        SSukSSukSSakSSakView(showers: .constant(DailyShower.sampleData))
+        SSukSSukSSakSSakView(showers: .constant(DailyShower.sampleData), saveAction: {})
  
     }
 }

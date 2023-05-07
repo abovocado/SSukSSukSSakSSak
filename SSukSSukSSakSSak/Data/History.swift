@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct History : Identifiable {
+struct History : Identifiable , Codable {
     var id: UUID
     var date: Date
     var bodies: [DailyShower.Bodies]

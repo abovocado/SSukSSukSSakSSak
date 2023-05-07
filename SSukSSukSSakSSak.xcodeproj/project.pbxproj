@@ -27,6 +27,7 @@
 		97DD9FEF29DFB76500624544 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD9FEE29DFB76500624544 /* TrailingIconLabelStyle.swift */; };
 		97F9C9AE2A068D6200335E65 /* ShowerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F9C9AD2A068D6200335E65 /* ShowerTimer.swift */; };
 		97F9C9B02A06A37500335E65 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F9C9AF2A06A37500335E65 /* History.swift */; };
+		97F9C9B22A07957200335E65 /* ShowerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F9C9B12A07957200335E65 /* ShowerStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		97DD9FEE29DFB76500624544 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		97F9C9AD2A068D6200335E65 /* ShowerTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowerTimer.swift; sourceTree = "<group>"; };
 		97F9C9AF2A06A37500335E65 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		97F9C9B12A07957200335E65 /* ShowerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				975DE9EC29FAB60C005B480B /* ColoredProgressView.swift */,
 				97F9C9AD2A068D6200335E65 /* ShowerTimer.swift */,
 				97F9C9AF2A06A37500335E65 /* History.swift */,
+				97F9C9B12A07957200335E65 /* ShowerStore.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DD9FE829DEC1B200624544 /* DailyShower.swift in Sources */,
+				97F9C9B22A07957200335E65 /* ShowerStore.swift in Sources */,
 				97DD9FEA29DEC33B00624544 /* Theme.swift in Sources */,
 				97F9C9AE2A068D6200335E65 /* ShowerTimer.swift in Sources */,
 				975DE9DD29F3EC69005B480B /* ShowerIngView.swift in Sources */,

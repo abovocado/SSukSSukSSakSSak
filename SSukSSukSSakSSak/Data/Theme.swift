@@ -9,7 +9,7 @@ import Foundation
 // Color > SwiftUI framework에서만 제공하는 기능 >> Color 객체를 사용하기 위해 필수로 import
 import SwiftUI
 
-enum Theme: String, Identifiable, CaseIterable {
+enum Theme: String, Identifiable, CaseIterable, Codable {
     // 색상 별 case 정의
     case lilyBlue
     case lilyPink

@@ -9,12 +9,26 @@ import SwiftUI
 
 @main
 struct SSukSSukSSakSSakApp: App {
-    @State private var showers = DailyShower.sampleData
-    
-    
+    @StateObject private var store = ShowerStore()
     var body: some Scene {
         WindowGroup {
-            SSukSSukSSakSSakView(showers : $showers)
+            SSukSSukSSakSSakView(showers : $store.showers){
+                Task {
+                    do {
+                        try await store.save(showers: store.showers)
+                    } catch {
+                        fatalError(error.localizedDescription)
+                    }
+                    
+                }
+            }
+                .task{
+                    do{
+                        try await store.load()
+                    } catch {
+                        fatalError(error.localizedDescription)
+                    }
+                }
         }
     }
 }
